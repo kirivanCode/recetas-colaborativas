@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,5 +19,10 @@ public class Main {
         gestor.agregarReceta(nuevaReceta);
         
         System.out.println("Receta agregada: " + nuevaReceta.getNombre());
+
+        System.out.println("\nLista de recetas guardadas:");
+        for (Receta receta : gestor.obtenerRecetas()) {
+            System.out.println("- " + receta.getNombre());
+        }
     }
 }
